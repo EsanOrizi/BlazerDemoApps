@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDemo", "BlazorDemo\Bl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDemo.Client", "BlazorDemo\BlazorDemo.Client\BlazorDemo.Client.csproj", "{15EADD46-B7E9-40E9-AA7E-9BF41838E62A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsDemo", "WinFormsDemo\WinFormsDemo.csproj", "{47863174-CFEE-4E64-92A0-244162FF8AD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{15EADD46-B7E9-40E9-AA7E-9BF41838E62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15EADD46-B7E9-40E9-AA7E-9BF41838E62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15EADD46-B7E9-40E9-AA7E-9BF41838E62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47863174-CFEE-4E64-92A0-244162FF8AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47863174-CFEE-4E64-92A0-244162FF8AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47863174-CFEE-4E64-92A0-244162FF8AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47863174-CFEE-4E64-92A0-244162FF8AD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
