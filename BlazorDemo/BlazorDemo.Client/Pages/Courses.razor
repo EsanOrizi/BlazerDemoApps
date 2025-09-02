@@ -1,0 +1,49 @@
+﻿@page "/courses"
+@using BlazorDemo.Client.Models
+@using System.Text.Json
+@inject HttpClient client
+
+<h3>Courses</h3>
+
+@if (courses is null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!courses.Any())
+{
+    <p><em>No courses found.</em></p>
+}
+else
+{
+        @foreach (var course in courses)
+        {
+          <a href="@course.CourseUrl">
+          <img src="@course.CourseImage" width="300" alt="@course.CourseName"/>
+          </a>
+        }
+  
+})
+
+@code {
+    private List<CourseModel>? courses;
+    private readonly JsonSerializerOptions options = 
+        new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+         courses = await client.GetFromJsonAsync<List<CourseModel>>("/courses", options);
+         ?? new();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            courses = new();
+
+        }
+    }
+}
