@@ -2,6 +2,7 @@
 @using BlazorDemo.Client.Models
 @using System.Text.Json
 @inject HttpClient client
+@rendermode @(new InteractiveAutoRenderMode(prerender: false))
 
 <h3>Courses</h3>
 
@@ -36,7 +37,7 @@ else
     {
         try
         {
-         courses = await client.GetFromJsonAsync<List<CourseModel>>("/courses", options);
+         courses = await client.GetFromJsonAsync<List<CourseModel>>("/courses", options)
          ?? new();
         }
         catch (Exception ex)

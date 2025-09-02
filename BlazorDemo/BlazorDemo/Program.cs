@@ -8,6 +8,9 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+builder.Services.AddScoped(x =>
+       new HttpClient { BaseAddress = new Uri("http://thesampleapi.com") });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
